@@ -1,0 +1,21 @@
+Algoritmo tienda 
+	definir m Como Caracter
+	definir t,tp,descuento Como Real
+	escribir "Ingrese el total a pagar: "
+	leer t
+	escribir "Ingrese el tipo de membresia (a,b o c):"
+	leer m
+	si m = "a"
+		descuento = 0.10
+	FinSi
+	si m = "b"
+		descuento = 0.15
+	FinSi
+	si m = "c"
+		descuento = 0.20
+	FinSi
+	tp= t - (t*descuento)
+	escribir "El total a pagar es :" tp
+	
+	
+FinAlgoritmo

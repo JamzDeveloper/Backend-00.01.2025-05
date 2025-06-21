@@ -1,0 +1,15 @@
+Algoritmo numpar
+	
+	definir num  Como Entero
+	escribir "Ingrse un numero :"
+	leer num
+	si num % 2 = 0 
+		Escribir "El numero es par "
+	SiNo
+		Escribir "El numero no es par "
+		
+	FinSi
+	
+	
+	
+FinAlgoritmo

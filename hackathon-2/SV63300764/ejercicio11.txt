@@ -1,0 +1,22 @@
+Algoritmo numeroMayor 
+	definir num1, num2, num3 Como Entero
+	escribir "Escribir primer numero: "
+	leer num1
+	escribir "Escribir segundo numero: "
+	leer num2
+	escribir "Escribir tercer numero: "
+	leer num3
+	
+	si num1>num2 y num1>num3
+		escribir "El numero mayor es :" num1
+	FinSi
+	si num2>num1 y num2>num3
+		escribir "El numero mayor es :" num2
+	FinSi
+	si num3>num1 y num3>num2
+		escribir "El numero mayor es :" num3
+	SiNo
+		escribir "Dos o mas  numeros son iguales"
+	FinSi
+
+    FinAlgoritmo

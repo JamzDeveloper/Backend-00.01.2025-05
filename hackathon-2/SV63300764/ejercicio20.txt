@@ -1,0 +1,59 @@
+Algoritmo calcular 
+	
+		Definir n1, n2, n3, n4,pa, cu , su  Como Entero
+		definir me Como Real
+		Escribir "Ingrese el primer número:"
+		Leer n1
+		Escribir "Ingrese el segundo número:"
+		Leer n2
+		Escribir "Ingrese el tercer número:"
+		Leer n3
+		Escribir "Ingrese el cuarto número:"
+		Leer n4
+		
+		pa= 0 
+		si n1 MOD 2 = 0
+			pa=pa + 1 
+		FinSi
+		si n2 MOD 2 = 0
+			pa=pa + 1 
+		FinSi
+		si n3 MOD 2 = 0
+			pa=pa + 1 
+		FinSi
+		si n3 MOD 2 = 0
+			pa=pa + 1 
+		FinSi
+		
+		escribir "La cantidad de numeros pares son : " pa  
+		
+		si n1 > n2 y n1> n3 y n1>n4
+		  Escribir "El numero mayor es : " n1
+	  FinSi
+	  si n2 > n1 y n2> n3 y n2>n4
+		  Escribir "El numero mayor es : " n2
+	  FinSi
+	  si n3 > n2 y n3> n1 y n3>n4
+		  Escribir "El numero mayor es : " n3
+	  FinSi
+	  si n4 > n2 y n4> n3 y n4>n1
+		  Escribir "El numero mayor es : " n4
+	  FinSi
+	  
+	  si n3 MOD 2 = 0 
+		  cu= n2 * n2 
+		  Escribir "El cuadrado del segundo numero es :" cu 
+	  FinSi
+	  
+	  si n1 < n4 
+		  me = (n1+n2+n3+n4) / 4 
+		  Escribir "La media de los numeros es : " me 
+	  FinSi
+	  si n2>n3 y 50< n3 y n3 >700
+		  su= n1+n2+n3+n4
+		  Escribir "La suma de los numeros es : " su 
+		  
+	  FinSi
+		
+		
+FinAlgoritmo

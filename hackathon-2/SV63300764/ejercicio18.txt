@@ -1,0 +1,31 @@
+Algoritmo pagar
+	Definir cd,total,ganancia Como Real
+	Escribir "Ingrese la cantidad de CD a comprar :"
+	Leer cd
+	si cd >=1 y cd <= 9
+		total = cd * 10
+		ganancia = total - (total*0.0825)
+		Escribir "Total a pagar: " total
+		Escribir "Ganancia: " ganancia
+	FinSi
+	si cd >=10 y cd <= 99
+		total = cd * 8
+		ganancia = total - (total*0.0825)
+		Escribir "Total a pagar: " total
+		Escribir "Ganancia: " ganancia
+	FinSi
+	si cd >=100 y cd <= 499
+		total = cd * 7
+		ganancia = total - (total*0.0825)
+		Escribir "Total a pagar: " total
+		Escribir "Ganancia: " ganancia
+	FinSi
+	si  cd >= 500
+		total = cd * 6
+		ganancia = total - (total*0.0825)
+		Escribir "Total a pagar: " total
+		Escribir "Ganancia: " ganancia
+	FinSi
+
+	
+FinAlgoritmo

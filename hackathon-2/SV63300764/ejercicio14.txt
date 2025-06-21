@@ -1,0 +1,12 @@
+Algoritmo primo
+	definir num  como entero 
+	Escribir "Ingrese un numero del 1 al 10 :"
+	leer num 
+	si num = 2 o num = 3 o num= 5 o num = 7 Entonces
+		escribir "El numero es primo "
+	SiNo
+		escribir "El numero no es primo "
+		
+	FinSi
+	
+FinAlgoritmo

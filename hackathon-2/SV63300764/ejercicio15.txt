@@ -1,0 +1,13 @@
+Algoritmo convertir 
+	definir cen,pul,li,ki Como Real
+	escribir "Ingrese centimetros :"
+	leer cen 
+	escribir "Ingrese libras :"
+	leer li 
+	pul = cen / 2.54
+	kil = li / 2.2
+	Escribir  cen " centimetros  convertidos a pulgadas son:" pul
+	Escribir  li " libras convertidas a kg son:" kil
+	
+	
+FinAlgoritmo

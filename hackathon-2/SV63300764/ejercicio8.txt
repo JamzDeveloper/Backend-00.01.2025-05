@@ -1,0 +1,19 @@
+Algoritmo promedio
+	definir n1,n2,n3,prom Como Real
+	escribir "Escribir nota 1:"
+	leer n1
+	escribir "Escribir nota 2:"
+	leer n2
+	escribir "Escribir nota 3:"
+	leer n3
+	prom = (n1+n2+n3) / 3
+	si prom >= 12
+		escribir "Estas aprobado "
+	SiNo
+		Escribir "Desaprobaste "
+	FinSi
+	
+	
+	
+	
+FinAlgoritmo

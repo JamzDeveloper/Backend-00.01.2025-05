@@ -1,0 +1,35 @@
+Algoritmo empleados
+	Definir salario,dias , id , pagar Como Entero
+	definir empleado como caracter
+	Escribir "Ingrese numero identificador (1,2,3,4):"
+	leer id
+	Escribir "Ingrese dias trabajados en la semana del 1 al 6:"
+	Leer dias 
+	si id = 1 
+		empleado = "cajero " 
+		salario = 56
+	sino 
+		si id =2 
+			empleado = "servidor "
+			salario = 64
+		sino
+			si id = 3
+				empleado = "Preparador de mezclas"
+				salario = 80
+			SiNo
+				empleado = "Mantenimiento "
+				salario = 48
+			FinSi
+			
+		FinSi
+		
+		
+		
+	FinSi
+	
+	pagar = salario * dias
+	Escribir "El salario del " empleado "es " pagar
+
+
+	
+FinAlgoritmo
