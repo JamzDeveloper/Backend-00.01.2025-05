@@ -65,4 +65,4 @@ miCelular.getSO();
 miCelular.cambiarEstado("En reparación");
 
 console.log("Estado final del equipo:", miCelular.estado);
-console.log("Repuestos usados:", miCelular.repuestos);
+console.log("Repuestos usados:", miCelular.repuestos); 
