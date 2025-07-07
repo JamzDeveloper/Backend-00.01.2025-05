@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-header">
+            <h1>REPARACIÓN DE EQUIPOS</h1>
+            <div id="branch-management-section">
+                <label for="addBranchInput">Añadir Nueva Sucursal:</label>
+                <input type="text" id="addBranchInput" placeholder="Nombre de la sucursal">
+                <button type="button" id="addBranchBtn">Añadir Sucursal</button>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>CREAR - EDITAR</h2>
+            <form id="ticketForm">
+                <fieldset>
+                    <legend>Equipo</legend>
+                    <label for="phoneImei">IMEI:</label>
+                    <input type="text" id="phoneImei" required>
+                    <label for="phoneBrand">Marca:</label>
+                    <input type="text" id="phoneBrand" required>
+                    <label for="phoneModel">Modelo:</label>
+                    <input type="text" id="phoneModel" required>
+                    <label for="phoneState">Estado:</label>
+                    <input type="text" id="phoneState" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sucursal</legend>
+                    <label for="branchSelect">Sucursal:</label>
+                    <select id="branchSelect" required>
+                        </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Cliente</legend>
+                    <label for="clientName">Nombre:</label>
+                    <input type="text" id="clientName" required>
+                    <label for="clientDni">DNI:</label>
+                    <input type="text" id="clientDni" required>
+                </fieldset>
+
+                
+
+                <fieldset>
+                    <legend>Técnico</legend>
+                    <label for="workerName">Nombre:</label>
+                    <input type="text" id="workerName" required>
+                    <label for="workerContact">Contacto:</label>
+                    <input type="text" id="workerContact" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ticket</legend>
+                    <label for="diagnosis">Diagnóstico:</label>
+                    <textarea id="diagnosis" rows="3" required></textarea>
+                    <label for="percentageAmount">Porcentaje de pago (%):</label>
+                    <input type="number" id="percentageAmount" step="0.01" required>
+                    <label for="finalAmount">Pago final:</label>
+                    <input type="number" id="finalAmount" step="0.01" required>
+                </fieldset>
+                
+                <input type="hidden" id="ticketId">
+                <div class="form-actions">
+                    <button type="submit">Guardar</button>
+                    <button type="button" id="clearFormBtn">Limpiar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="ticket-list-section">
+            <h2>TICKETS REGISTRADOS</h2>
+            <div id="ticketList">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Equipo (IMEI / Marca / Modelo)</th>
+                            <th>Cliente (Nombre / DNI)</th>
+                            <th>Sucursal</th>
+                            <th>Técnico (Nombre / Contacto)</th>
+                            <th>Diagnóstico</th>
+                            <th>% Pago</th>
+                            <th>Pago final</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ticketTableBody">
+                        </tbody>
+                </table>
+                <p id="noTicketsMessage" style="text-align: center; color: #666; margin-top: 20px;">No tickets registered yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
