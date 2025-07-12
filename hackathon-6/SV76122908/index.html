@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Reparación de Celulares</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+    h1 {
+      color: #0d6efd;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, button {
+      padding: 8px;
+      width: 100%;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #0d6efd;
+      color: white;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0b5ed7;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📱 Sistema de Reparación de Celulares</h1>
+
+  <div class="card">
+    <h2>1. Registro del Técnico y Sucursal</h2>
+    <label>Nombre del Técnico:</label>
+    <input type="text" id="tecnicoNombre">
+    <label>Skill del Técnico (marca que puede reparar):</label>
+    <input type="text" id="tecnicoSkill">
+    <label>Nombre de la Sucursal:</label>
+    <input type="text" id="sucursalNombre">
+    <button onclick="registrarTecnicoSucursal()">Registrar Técnico y Sucursal</button>
+  </div>
+
+  <div class="card">
+    <h2>2. Ingreso de Teléfono</h2>
+    <label>Serie:</label>
+    <input type="text" id="serie">
+    <label>IMEI:</label>
+    <input type="text" id="imei">
+    <label>Marca:</label>
+    <input type="text" id="marca">
+    <button onclick="ingresarTelefono()">Ingresar Teléfono</button>
+  </div>
+
+  <div class="card">
+    <h2>3. Proceso de Reparación</h2>
+    <label>Diagnóstico inicial:</label>
+    <input type="text" id="diagnostico">
+    <label>Autorizado por cliente:</label>
+    <select id="autorizado">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select>
+    <label>Abono realizado (Ej: 0.5):</label>
+    <input type="number" id="abono" step="0.1" min="0" max="1">
+    <label>Repuesto:</label>
+    <input type="text" id="repuesto">
+    <label>Nuevo estado del equipo:</label>
+    <input type="text" id="nuevoEstado">
+    <button onclick="procesarReparacion()">Procesar Reparación</button>
+  </div>
+
+  <div class="card">
+    <h2>4. Estado del Sistema</h2>
+    <button onclick="mostrarEstados()">Mostrar Estados</button>
+    <pre id="estadoOutput"></pre>
+  </div>
+
+  <script>
+    class Telefono {
+      constructor(serie, imei, marca) {
+        this.serie = serie;
+        this.imei = imei;
+        this.marca = marca;
+        this.diagnostico = null;
+        this.autorizado = false;
+        this.abono = 0;
+        this.repuestos = [];
+        this.estado = "Ingresado";
+      }
+
+      hacerDiagnostico(diag) {
+        this.diagnostico = diag;
+        this.estado = "Revisado";
+      }
+
+      autorizarReparacion(aut, abono) {
+        if (aut && abono >= 0.5) {
+          this.autorizado = true;
+          this.abono = abono;
+          this.estado = "Autorizado";
+        }
+      }
+
+      agregarRepuesto(rep) {
+        this.repuestos.push(rep);
+      }
+
+      actualizarEstado(nuevoEstado) {
+        this.estado = nuevoEstado;
+      }
+
+      resumen() {
+        return `
+📱 Teléfono:
+- Serie: ${this.serie}
+- IMEI: ${this.imei}
+- Marca: ${this.marca}
+- Estado: ${this.estado}
+- Diagnóstico: ${this.diagnostico}
+- Autorizado: ${this.autorizado}
+- Repuestos: ${this.repuestos.join(", ")}
+`;
+      }
+    }
+
+    class Tecnico {
+      constructor(nombre) {
+        this.nombre = nombre;
+        this.skills = [];
+      }
+
+      agregarSkill(skill) {
+        this.skills.push(skill);
+      }
+
+      puedeReparar(marca) {
+        return this.skills.includes(marca);
+      }
+    }
+
+    class Sucursal {
+      constructor(nombre) {
+        this.nombre = nombre;
+        this.telefonos = [];
+      }
+
+      ingresarTelefono(telefono) {
+        const key = `${telefono.serie}-${telefono.imei}`;
+        if (localStorage.getItem(key)) {
+          alert("🚫 Teléfono ya registrado anteriormente.");
+        } else {
+          localStorage.setItem(key, JSON.stringify(telefono));
+          this.telefonos.push(telefono);
+          alert("✅ Teléfono ingresado con éxito.");
+        }
+      }
+
+      mostrarEstados() {
+        return this.telefonos.map(t => t.resumen()).join("\n");
+      }
+    }
+
+    let tecnico;
+    let sucursal;
+    let telefonoActual;
+
+    function registrarTecnicoSucursal() {
+      const nombreTecnico = document.getElementById("tecnicoNombre").value;
+      const skill = document.getElementById("tecnicoSkill").value;
+      const nombreSucursal = document.getElementById("sucursalNombre").value;
+
+      tecnico = new Tecnico(nombreTecnico);
+      tecnico.agregarSkill(skill);
+      sucursal = new Sucursal(nombreSucursal);
+
+      sessionStorage.setItem("tecnicoActivo", nombreTecnico);
+      sessionStorage.setItem("sucursalActual", nombreSucursal);
+
+      alert("✅ Técnico y sucursal registrados.");
+    }
+
+    function ingresarTelefono() {
+      const serie = document.getElementById("serie").value;
+      const imei = document.getElementById("imei").value;
+      const marca = document.getElementById("marca").value;
+
+      if (!tecnico.puedeReparar(marca)) {
+        alert("⚠️ El técnico no tiene habilidades para esta marca.");
+        return;
+      }
+
+      telefonoActual = new Telefono(serie, imei, marca);
+      sucursal.ingresarTelefono(telefonoActual);
+    }
+
+    function procesarReparacion() {
+      if (!telefonoActual) {
+        alert("❌ Primero ingrese un teléfono.");
+        return;
+      }
+
+      const diag = document.getElementById("diagnostico").value;
+      const autorizado = document.getElementById("autorizado").value === "true";
+      const abono = parseFloat(document.getElementById("abono").value);
+      const repuesto = document.getElementById("repuesto").value;
+      const nuevoEstado = document.getElementById("nuevoEstado").value;
+
+      telefonoActual.hacerDiagnostico(diag);
+      telefonoActual.autorizarReparacion(autorizado, abono);
+      telefonoActual.agregarRepuesto(repuesto);
+      telefonoActual.actualizarEstado(nuevoEstado);
+
+      alert("🛠️ Reparación procesada.");
+    }
+
+    function mostrarEstados() {
+      document.getElementById("estadoOutput").textContent = sucursal.mostrarEstados();
+    }
+  </script>
+</body>
+</html>
