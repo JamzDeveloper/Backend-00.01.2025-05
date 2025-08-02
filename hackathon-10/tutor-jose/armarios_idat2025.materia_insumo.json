@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "688e23e10deb99397658f434"
+  },
+  "type": "insumo",
+  "name": "cola",
+  "unitMeasurement": "lt",
+  "price": 4,
+  "descripcion": "para pegar"
+},
+{
+  "_id": {
+    "$oid": "688e24890deb99397658f435"
+  },
+  "type": "materia",
+  "name": "melamina",
+  "unitMeasurement": "mt2",
+  "price": 250,
+  "descripcion": "dar estilo"
+},
+{
+  "_id": {
+    "$oid": "688e24890deb99397658f436"
+  },
+  "type": "insumo",
+  "name": "claovs",
+  "unitMeasurement": "kg",
+  "price": 5,
+  "descripcion": "para armar"
+}]
