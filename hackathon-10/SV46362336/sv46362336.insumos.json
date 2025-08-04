@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6890003e1d086d1bdaeec4ad"
+  },
+  "nombre": "Tornillos para madera",
+  "marca": "FixaTornillos",
+  "cantidad_disponible": 10000,
+  "unidad_medida": "unidades"
+},
+{
+  "_id": {
+    "$oid": "6890003e1d086d1bdaeec4ae"
+  },
+  "nombre": "Bisagras de metal",
+  "marca": "Herrajes Premium",
+  "cantidad_disponible": 500,
+  "unidad_medida": "pares"
+},
+{
+  "_id": {
+    "$oid": "6890003e1d086d1bdaeec4af"
+  },
+  "nombre": "Pegamento para madera",
+  "marca": "Adhesivos Ultra",
+  "cantidad_disponible": 150,
+  "unidad_medida": "litros"
+},
+{
+  "_id": {
+    "$oid": "6890003e1d086d1bdaeec4b0"
+  },
+  "nombre": "Clavos para madera",
+  "marca": "San Lorenzo",
+  "cantidad_disponible": 400,
+  "unidad_medida": "unidades"
+}]

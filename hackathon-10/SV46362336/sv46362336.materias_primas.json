@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "688ffcae1d086d1bdaeec4a9"
+  },
+  "nombre": "Madera de pino",
+  "proveedor": "Maderas del Bosque S.A.",
+  "cantidad_disponible": 500,
+  "unidad_medida": "metros cuadrados",
+  "precio": 15
+},
+{
+  "_id": {
+    "$oid": "688ffcae1d086d1bdaeec4aa"
+  },
+  "nombre": "Tablero MDF",
+  "proveedor": "Aglomerados Peruanos S.A.",
+  "cantidad_disponible": 800,
+  "unidad_medida": "planchas",
+  "precio": 20
+},
+{
+  "_id": {
+    "$oid": "688ffcae1d086d1bdaeec4ab"
+  },
+  "nombre": "Lámina de melamina blanca",
+  "proveedor": "Decoraciones Modernas",
+  "cantidad_disponible": 300,
+  "unidad_medida": "hojas",
+  "precio": 35
+},
+{
+  "_id": {
+    "$oid": "688ffcae1d086d1bdaeec4ac"
+  },
+  "nombre": "Madera de roble",
+  "proveedor": "San Lorenzo",
+  "cantidad_disponible": 500,
+  "unidad_medida": "metros cuadrados",
+  "precio": 25
+}]

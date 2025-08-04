@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "689003431d086d1bdaeec4b4"
+  },
+  "lote_produccion": "LT-20240803-001",
+  "producto_final": "Armario de cocina",
+  "cantidad_producida": 10,
+  "fecha_inicio": {
+    "$date": "2024-08-01T08:00:00.000Z"
+  },
+  "fecha_fin": {
+    "$date": "2024-08-03T17:00:00.000Z"
+  },
+  "materias_usadas": [
+    {
+      "id_materia": {
+        "$oid": "688ffcae1d086d1bdaeec4ab"
+      },
+      "cantidad_usada": 20
+    },
+    {
+      "id_materia": {
+        "$oid": "688ffcae1d086d1bdaeec4aa"
+      },
+      "cantidad_usada": 30
+    }
+  ],
+  "insumos_usados": [
+    {
+      "id_insumo": {
+        "$oid": "6890003e1d086d1bdaeec4ae"
+      },
+      "cantidad_usada": 200
+    },
+    {
+      "id_insumo": {
+        "$oid": "6890003e1d086d1bdaeec4ad"
+      },
+      "cantidad_usada": 400
+    }
+  ],
+  "personal_responsable": [
+    {
+      "$oid": "689001bd1d086d1bdaeec4b1"
+    },
+    {
+      "$oid": "689001bd1d086d1bdaeec4b2"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6890056d1d086d1bdaeec4b5"
+  },
+  "lote_produccion": "LT-20251003-021",
+  "producto_final": "Closet de dormitorio",
+  "cantidad_producida": 10,
+  "fecha_inicio": {
+    "$date": "2025-10-01T08:00:00.000Z"
+  },
+  "fecha_fin": {
+    "$date": "2025-10-03T17:00:00.000Z"
+  },
+  "materias_usadas": [
+    {
+      "id_materia": {
+        "$oid": "688ffcae1d086d1bdaeec4ac"
+      },
+      "cantidad_usada": 20
+    },
+    {
+      "id_materia": {
+        "$oid": "688ffcae1d086d1bdaeec4a9"
+      },
+      "cantidad_usada": 30
+    }
+  ],
+  "insumos_usados": [
+    {
+      "id_insumo": {
+        "$oid": "6890003e1d086d1bdaeec4af"
+      },
+      "cantidad_usada": 50
+    },
+    {
+      "id_insumo": {
+        "$oid": "6890003e1d086d1bdaeec4b0"
+      },
+      "cantidad_usada": 400
+    }
+  ],
+  "personal_responsable": [
+    {
+      "$oid": "689001bd1d086d1bdaeec4b2"
+    },
+    {
+      "$oid": "689001bd1d086d1bdaeec4b3"
+    }
+  ]
+}]
