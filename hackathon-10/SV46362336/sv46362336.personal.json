@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "689001bd1d086d1bdaeec4b1"
+  },
+  "nombre_completo": "Carlos Jara",
+  "dni": "70123456",
+  "cargo": "Jefe de Producción",
+  "fecha_contratacion": {
+    "$date": "2023-01-15T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "689001bd1d086d1bdaeec4b2"
+  },
+  "nombre_completo": "María Torres",
+  "dni": "70654321",
+  "cargo": "Operadora de Maquinaria",
+  "fecha_contratacion": {
+    "$date": "2021-03-20T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "689001bd1d086d1bdaeec4b3"
+  },
+  "nombre_completo": "Rodrigo Ruiz",
+  "dni": "70987654",
+  "cargo": "Carpintero",
+  "fecha_contratacion": {
+    "$date": "2024-10-05T00:00:00.000Z"
+  }
+}]
