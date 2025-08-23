@@ -1,10 +1,13 @@
 import express from "express";
-
+import mongoose from "mongoose";
 import cors from "cors";
-
+import userRoute from "../modules/users/routes/user.route.js"
 class Server {
   constructor() {
     this.port = process.env.PORT || 3000;
+    this.mongoUrl =
+      process.env.MONGO_URL || "mongodb://localhost:27017/courses_sales";
+    this.userPath = "/users";
     this.app = express();
 
     this.middleware();
@@ -15,9 +18,11 @@ class Server {
   }
 
   routes() {
-    this.app.get("/",(req,res)=>{
-      res.send("Api online")
-    })
+    this.app.get("/", (req, res) => {
+      res.send("Api online");
+    });
+
+    this.app.use(this.userPath,userRoute)
   }
 
   middleware() {
@@ -25,7 +30,10 @@ class Server {
     this.app.use(express.json());
   }
 
-  async dbConnection() {}
+  async dbConnection() {
+    await mongoose.connect(this.mongoUrl);
+    console.log("MongoDb connected");
+  }
 
   listen() {
     this.app.listen(this.port, () => {
