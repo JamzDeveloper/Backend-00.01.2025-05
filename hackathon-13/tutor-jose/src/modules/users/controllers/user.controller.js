@@ -27,4 +27,17 @@ const registerUserController = async (req = request, res = response) => {
   });
 };
 
-export { registerUserController };
+const listUserController = async (req = request, res = response) => {
+
+
+  // console.log("req.user",req.user)
+  const result = await UserModel.find();
+
+  return res.status(200).json({
+    statusCode: 200,
+    message: "List User",
+    data: result,
+  });
+};
+
+export { registerUserController, listUserController };
