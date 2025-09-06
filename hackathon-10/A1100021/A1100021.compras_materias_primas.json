@@ -1,0 +1,92 @@
+[{
+  "_id": {
+    "$oid": "68a5a87d6563ceef29eec4d0"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b5"
+  },
+  "fecha_compra": {
+    "$date": "2025-07-15T00:00:00.000Z"
+  },
+  "total_compra": 1500,
+  "observaciones": "Compra mensual de MDF",
+  "items": [
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4b8"
+      },
+      "cantidad": 100,
+      "precio_unitario": 15,
+      "subtotal": 1500
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68a5a87d6563ceef29eec4d1"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b7"
+  },
+  "fecha_compra": {
+    "$date": "2025-07-18T00:00:00.000Z"
+  },
+  "total_compra": 1704,
+  "observaciones": "Reposición de melamina blanca",
+  "items": [
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4b9"
+      },
+      "cantidad": 120,
+      "precio_unitario": 14.2,
+      "subtotal": 1704
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68a5a87d6563ceef29eec4d2"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b6"
+  },
+  "fecha_compra": {
+    "$date": "2025-07-10T00:00:00.000Z"
+  },
+  "total_compra": 425,
+  "observaciones": "Compra de bisagras tipo cazoleta",
+  "items": [
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4ba"
+      },
+      "cantidad": 500,
+      "precio_unitario": 0.85,
+      "subtotal": 425
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68a5a87d6563ceef29eec4d3"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b6"
+  },
+  "fecha_compra": {
+    "$date": "2025-07-12T00:00:00.000Z"
+  },
+  "total_compra": 144,
+  "observaciones": "Tornillos para stock de producción",
+  "items": [
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4bb"
+      },
+      "cantidad": 1200,
+      "precio_unitario": 0.12,
+      "subtotal": 144
+    }
+  ]
+}]

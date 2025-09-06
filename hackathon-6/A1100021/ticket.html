@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Tickets | ServiPhone</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">ServiPhone</div>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li>
+            <a href="#">Servicios ▾</a>
+            <ul>
+              <li><a href="./client.html">Clientes</a></li>
+              <li><a href="./phone.html">Teléfonos</a></li>
+              <li><a href="./ticket.html">Tickets</a></li>
+              <li><a href="./control.html">Control</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Datos ▾</a>
+             <ul>
+              <li><a href="./report.html">Reporte</a></li>
+              <li><a href="./backup.html">Backup</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Central ▾</a>
+             <ul>
+              <li><a href="./alert.html">Reportar</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Mantenimiento ▾</a>
+            <ul>
+              <li><a href="./central.html">Centrales</a></li>
+              <li><a href="./branch.html">Sucursales</a></li>
+              <li><a href="./employee.html">Empleados</a></li>
+              <li><a href="./part.html">Repuestos</a></li>
+              <li><a href="./model.html">Modelos</a></li>
+              <li><a href="./brand.html">Marcas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Barra de navegación -->
+    <section>
+      <h2>Tickets</h2>
+
+      <label for="cliente">Cliente:</label>
+      <div class="select-wrapper">
+        <input type="text" id="cliente-input" placeholder="Buscar cliente por nombre..." autocomplete="off"/>
+        <ul class="select-dropdown" id="cliente-dropdown"></ul>
+        <select id="cliente" name="cliente" style="display: none;"></select>
+      </div>
+
+      <label for="telefono">Teléfono:</label>
+      <div class="select-wrapper">
+        <input type="text" id="telefono-input" placeholder="Buscar teléfono por imei o marca..." autocomplete="off"/>
+        <ul class="select-dropdown" id="telefono-dropdown"></ul>
+        <select id="telefono" name="telefono" style="display: none;"></select>
+      </div>
+      
+      <label for="diagnostico">Diagnóstico:</label>
+      <input type="text" id="diagnostico" name="diagnostico" placeholder="Diagnóstico"/> 
+
+      <label for="repuesto">Repuesto:</label>
+      <div class="select-wrapper">
+        <input type="text" id="repuesto-input" placeholder="Buscar repuesto por código o nombre..." autocomplete="off"/>
+        <ul class="select-dropdown" id="repuesto-dropdown"></ul>
+        <select id="repuesto" name="repuesto" style="display: none;"></select>
+      </div>
+
+      <label for="sucursal">Sucursal:</label>
+      <select id="sucursal" name="sucursal"></select>
+       
+      <label for="montoFinal">Pago total (S/.):</label>
+      <input type="number" id="montoFinal" name="montoFinal" min="0" value="0" />
+
+      <div class="input-checkbox">
+        <input type="checkbox" id="monto-checkbox" />
+        <label for="monto-checkbox">Pago parcial (S/.):</label>
+      </div> 
+      <input type="number" id="monto" name="monto" min="0" value="0" disabled />
+
+      <button id="registrar">Registrar</button>
+    </section>
+    
+    <script src="./persistence/db_operations.js"></script>
+    <script src="./persistence/db.js"></script>
+    <script src="./model/ticket.js"></script>
+    <script src="./model/client.js"></script>
+    <script src="./model/phone.js"></script>
+    <script src="./model/part.js"></script>
+    <script src="./model/central.js"></script>
+    <script src="./model/branch.js"></script>
+    <script src="./js/ticket.js"></script>
+  </body>
+</html>

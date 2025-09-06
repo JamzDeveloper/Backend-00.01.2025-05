@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "68a57cb16563ceef29eec4ab"
+  },
+  "nombre": "Diseñador CAD",
+  "descripcion": "Diseña planos y modelos en software especializado",
+  "salario_base": 1700,
+  "departamento_id": {
+    "$oid": "68a57476ec74a92e1beec4aa"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a57cb16563ceef29eec4ac"
+  },
+  "nombre": "Especialista en Personalización",
+  "descripcion": "Adapta diseños a requerimientos del cliente",
+  "salario_base": 1650,
+  "departamento_id": {
+    "$oid": "68a57476ec74a92e1beec4aa"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a57cb16563ceef29eec4a9"
+  },
+  "nombre": "Ensamblador",
+  "descripcion": "Ensamblaje de componentes para formar el armario final",
+  "salario_base": 1300,
+  "departamento_id": {
+    "$oid": "68a57476ec74a92e1beec4a9"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a57cb16563ceef29eec4aa"
+  },
+  "nombre": "Técnico de Mantenimiento",
+  "descripcion": "Mantiene en buen estado las máquinas de producción",
+  "salario_base": 1500,
+  "departamento_id": {
+    "$oid": "68a57476ec74a92e1beec4a9"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a57cb16563ceef29eec4ad"
+  },
+  "nombre": "Encargado de Almacén",
+  "descripcion": "Controla el inventario de armarios y materiales",
+  "salario_base": 1400,
+  "departamento_id": {
+    "$oid": "68a57476ec74a92e1beec4ab"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a57cb16563ceef29eec4ae"
+  },
+  "nombre": "Conductor de Reparto",
+  "descripcion": "Entrega armarios a clientes o tiendas",
+  "salario_base": 1350,
+  "departamento_id": {
+    "$oid": "68a57476ec74a92e1beec4ab"
+  }
+}]

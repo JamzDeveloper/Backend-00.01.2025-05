@@ -94,7 +94,7 @@ class Ticket {
       this.state = stateTicket.process;
       console.log("📱✅ Servicio iniciado");
     } else {
-      console.log("⚠️  No cumple con las condiciones basicas para iniciar la repación.");
+      console.log("⚠️  No cumple con las condiciones basicas para iniciar la reparación.");
     }
   }
 
@@ -104,7 +104,7 @@ class Ticket {
       this.state = stateTicket.finally;
       console.log("📱✅ Servicio finalizado");
     } else {
-      console.log("⚠️  No cumple con las condiciones basicas para finalizar la repación.");
+      console.log("⚠️  No cumple con las condiciones basicas para finalizar la reparación.");
     }
   }
 }

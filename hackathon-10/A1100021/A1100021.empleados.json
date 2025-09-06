@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "68a58a3e6563ceef29eec4af"
+  },
+  "dni": "12345678A",
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "fecha_nacimiento": {
+    "$date": "1990-05-15T00:00:00.000Z"
+  },
+  "genero": "M",
+  "telefono": "+34123456789",
+  "email": "juan.perez@empresa.com",
+  "direccion": "Calle Falsa 123",
+  "fecha_ingreso": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "estado": "Activo",
+  "puesto_id": {
+    "$oid": "68a57cb16563ceef29eec4a9"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a58a3e6563ceef29eec4b0"
+  },
+  "dni": "87654321B",
+  "nombre": "Lucía",
+  "apellido": "Martínez",
+  "fecha_nacimiento": {
+    "$date": "1992-08-20T00:00:00.000Z"
+  },
+  "genero": "F",
+  "telefono": "+34123456788",
+  "email": "lucia.martinez@empresa.com",
+  "direccion": "Avenida Siempre Viva 742",
+  "fecha_ingreso": {
+    "$date": "2021-04-15T00:00:00.000Z"
+  },
+  "estado": "Activo",
+  "puesto_id": {
+    "$oid": "68a57cb16563ceef29eec4aa"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a58a546563ceef29eec4b1"
+  },
+  "dni": "23456789C",
+  "nombre": "Carlos",
+  "apellido": "Gómez",
+  "fecha_nacimiento": {
+    "$date": "1985-11-02T00:00:00.000Z"
+  },
+  "genero": "M",
+  "telefono": "+34123456787",
+  "email": "carlos.gomez@empresa.com",
+  "direccion": "Calle del Transporte 55",
+  "fecha_ingreso": {
+    "$date": "2019-09-01T00:00:00.000Z"
+  },
+  "estado": "Activo",
+  "puesto_id": {
+    "$oid": "68a57cb16563ceef29eec4ab"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a58a546563ceef29eec4b2"
+  },
+  "dni": "34567890D",
+  "nombre": "Ana",
+  "apellido": "López",
+  "fecha_nacimiento": {
+    "$date": "1993-03-14T00:00:00.000Z"
+  },
+  "genero": "F",
+  "telefono": "+34123456786",
+  "email": "ana.lopez@empresa.com",
+  "direccion": "Camino de los Armarios 88",
+  "fecha_ingreso": {
+    "$date": "2022-06-10T00:00:00.000Z"
+  },
+  "estado": "Activo",
+  "puesto_id": {
+    "$oid": "68a57cb16563ceef29eec4ac"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a58a5e6563ceef29eec4b3"
+  },
+  "dni": "45678901E",
+  "nombre": "Pedro",
+  "apellido": "Ramírez",
+  "fecha_nacimiento": {
+    "$date": "1988-07-22T00:00:00.000Z"
+  },
+  "genero": "M",
+  "telefono": "+34123456785",
+  "email": "pedro.ramirez@empresa.com",
+  "direccion": "Polígono Industrial 21",
+  "fecha_ingreso": {
+    "$date": "2018-03-12T00:00:00.000Z"
+  },
+  "estado": "Activo",
+  "puesto_id": {
+    "$oid": "68a57cb16563ceef29eec4ad"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a58a5e6563ceef29eec4b4"
+  },
+  "dni": "56789012F",
+  "nombre": "María",
+  "apellido": "Fernández",
+  "fecha_nacimiento": {
+    "$date": "1995-12-05T00:00:00.000Z"
+  },
+  "genero": "F",
+  "telefono": "+34123456784",
+  "email": "maria.fernandez@empresa.com",
+  "direccion": "Calle del Diseño 9",
+  "fecha_ingreso": {
+    "$date": "2023-01-20T00:00:00.000Z"
+  },
+  "estado": "Activo",
+  "puesto_id": {
+    "$oid": "68a57cb16563ceef29eec4ae"
+  }
+}]
