@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Backup | ServiPhone</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">ServiPhone</div>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li>
+            <a href="#">Servicios ▾</a>
+            <ul>
+              <li><a href="./client.html">Clientes</a></li>
+              <li><a href="./phone.html">Teléfonos</a></li>
+              <li><a href="./ticket.html">Tickets</a></li>
+              <li><a href="./control.html">Control</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Datos ▾</a>
+             <ul>
+              <li><a href="./report.html">Reporte</a></li>
+              <li><a href="./backup.html">Backup</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Central ▾</a>
+             <ul>
+              <li><a href="./alert.html">Reportar</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Mantenimiento ▾</a>
+            <ul>
+              <li><a href="./central.html">Centrales</a></li>
+              <li><a href="./branch.html">Sucursales</a></li>
+              <li><a href="./employee.html">Empleados</a></li>
+              <li><a href="./part.html">Repuestos</a></li>
+              <li><a href="./model.html">Modelos</a></li>
+              <li><a href="./brand.html">Marcas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Barra de navegación -->
+    <section>
+      <h2>Exportar Backup</h2> 
+
+      <input type="button" id="exportar" style="display: none;" />
+      <label for="exportar" class="backup-btn">⬇️ Exportar JSON</label>
+
+    </section>
+     
+    <section>
+      <h2>Importar Backup</h2>
+
+      <input type="file" id="importar" accept="application/json" style="display: none;" />
+      <label for="importar" class="backup-btn">📁 Importar JSON</label>
+
+    </section>
+
+    <script src="./js/backup.js"></script> 
+  </body>
+</html>

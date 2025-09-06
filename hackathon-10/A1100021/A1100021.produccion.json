@@ -1,0 +1,168 @@
+[{
+  "_id": {
+    "$oid": "68a5a9256563ceef29eec4d8"
+  },
+  "fecha": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "producto": {
+    "nombre": "Armario de 3 puertas con espejo",
+    "modelo": "A3P-ES",
+    "descripcion": "Armario moderno de 180cm de ancho con espejo frontal"
+  },
+  "cantidad_producida": 10,
+  "unidad": "unidad",
+  "empleados_involucrados": [
+    {
+      "$oid": "68a58a546563ceef29eec4b1"
+    },
+    {
+      "$oid": "68a58a3e6563ceef29eec4b0"
+    },
+    {
+      "$oid": "68a58a5e6563ceef29eec4b3"
+    }
+  ],
+  "materias_primas_utilizadas": [
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4b8"
+      },
+      "cantidad_utilizada": 20
+    },
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4ba"
+      },
+      "cantidad_utilizada": 30
+    }
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4bc"
+      },
+      "cantidad_utilizada": 2
+    }
+  ],
+  "observaciones": "Producción sin incidencias. Buen rendimiento del equipo.",
+  "estado": "completado"
+},
+{
+  "_id": {
+    "$oid": "68a5a9256563ceef29eec4d9"
+  },
+  "fecha": {
+    "$date": "2025-08-22T00:00:00.000Z"
+  },
+  "producto": {
+    "nombre": "Mesa de comedor rectangular",
+    "modelo": "MDR-180",
+    "descripcion": "Mesa de comedor para 6 personas, acabado barniz transparente"
+  },
+  "cantidad_producida": 5,
+  "unidad": "unidad",
+  "empleados_involucrados": [
+    {
+      "$oid": "68a58a546563ceef29eec4b2"
+    },
+    {
+      "$oid": "68a58a3e6563ceef29eec4af"
+    },
+    {
+      "$oid": "68a58a5e6563ceef29eec4b4"
+    }
+  ],
+  "materias_primas_utilizadas": [
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4b8"
+      },
+      "cantidad_utilizada": 15
+    },
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4bb"
+      },
+      "cantidad_utilizada": 100
+    }
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4be"
+      },
+      "cantidad_utilizada": 3
+    },
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4bd"
+      },
+      "cantidad_utilizada": 2
+    }
+  ],
+  "observaciones": "El barniz aplicado con buen acabado.",
+  "estado": "completado"
+},
+{
+  "_id": {
+    "$oid": "68a5a9256563ceef29eec4da"
+  },
+  "fecha": {
+    "$date": "2025-08-25T00:00:00.000Z"
+  },
+  "producto": {
+    "nombre": "Estantería modular",
+    "modelo": "EM-4N",
+    "descripcion": "Estantería modular de 4 niveles para oficina"
+  },
+  "cantidad_producida": 8,
+  "unidad": "unidad",
+  "empleados_involucrados": [
+    {
+      "$oid": "68a58a546563ceef29eec4b1"
+    },
+    {
+      "$oid": "68a58a3e6563ceef29eec4b0"
+    },
+    {
+      "$oid": "68a58a5e6563ceef29eec4b4"
+    }
+  ],
+  "materias_primas_utilizadas": [
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4b8"
+      },
+      "cantidad_utilizada": 25
+    },
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4ba"
+      },
+      "cantidad_utilizada": 20
+    },
+    {
+      "materia_prima_id": {
+        "$oid": "68a59da76563ceef29eec4bb"
+      },
+      "cantidad_utilizada": 80
+    }
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4bd"
+      },
+      "cantidad_utilizada": 3
+    },
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4bf"
+      },
+      "cantidad_utilizada": 4
+    }
+  ],
+  "observaciones": "Producción con logística eficiente y control de calidad.",
+  "estado": "completado"
+}]

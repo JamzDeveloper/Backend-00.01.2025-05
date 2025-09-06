@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4db"
+  },
+  "empleado_id": {
+    "$oid": "68a58a546563ceef29eec4b1"
+  },
+  "fecha": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "hora_entrada": "08:00",
+  "hora_salida": "16:00",
+  "observaciones": "Entrada puntual"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4dc"
+  },
+  "empleado_id": {
+    "$oid": "68a58a3e6563ceef29eec4b0"
+  },
+  "fecha": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "hora_entrada": "08:05",
+  "hora_salida": "16:00",
+  "observaciones": "Leve retraso"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4dd"
+  },
+  "empleado_id": {
+    "$oid": "68a58a5e6563ceef29eec4b3"
+  },
+  "fecha": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "hora_entrada": "07:55",
+  "hora_salida": "16:00",
+  "observaciones": "Entrada anticipada"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4de"
+  },
+  "empleado_id": {
+    "$oid": "68a58a546563ceef29eec4b2"
+  },
+  "fecha": {
+    "$date": "2025-08-22T00:00:00.000Z"
+  },
+  "hora_entrada": "08:00",
+  "hora_salida": "16:00",
+  "observaciones": "Entrada puntual"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4df"
+  },
+  "empleado_id": {
+    "$oid": "68a58a3e6563ceef29eec4af"
+  },
+  "fecha": {
+    "$date": "2025-08-22T00:00:00.000Z"
+  },
+  "hora_entrada": "08:00",
+  "hora_salida": "16:00",
+  "observaciones": "Entrada puntual"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4e0"
+  },
+  "empleado_id": {
+    "$oid": "68a58a5e6563ceef29eec4b4"
+  },
+  "fecha": {
+    "$date": "2025-08-22T00:00:00.000Z"
+  },
+  "hora_entrada": "08:10",
+  "hora_salida": "16:00",
+  "observaciones": "Llegó tarde por tráfico"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4e1"
+  },
+  "empleado_id": {
+    "$oid": "68a58a546563ceef29eec4b1"
+  },
+  "fecha": {
+    "$date": "2025-08-25T00:00:00.000Z"
+  },
+  "hora_entrada": "08:00",
+  "hora_salida": "16:00",
+  "observaciones": "Entrada puntual"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4e2"
+  },
+  "empleado_id": {
+    "$oid": "68a58a3e6563ceef29eec4b0"
+  },
+  "fecha": {
+    "$date": "2025-08-25T00:00:00.000Z"
+  },
+  "hora_entrada": "08:03",
+  "hora_salida": "16:00",
+  "observaciones": "Entrada casi puntual"
+},
+{
+  "_id": {
+    "$oid": "68a5abad6563ceef29eec4e3"
+  },
+  "empleado_id": {
+    "$oid": "68a58a5e6563ceef29eec4b4"
+  },
+  "fecha": {
+    "$date": "2025-08-25T00:00:00.000Z"
+  },
+  "hora_entrada": "08:00",
+  "hora_salida": "16:00",
+  "observaciones": "Entrada puntual"
+}]

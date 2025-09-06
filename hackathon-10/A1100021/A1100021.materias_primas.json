@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "68a59da76563ceef29eec4b8"
+  },
+  "nombre": "MDF 18mm",
+  "descripcion": "Tablero MDF de 18 mm para estructuras y frentes de muebles",
+  "unidad_medida": "m2",
+  "stock_actual": 250,
+  "stock_minimo": 100,
+  "precio_unitario": 12.5,
+  "fecha_ultima_compra": {
+    "$date": "2025-07-15T00:00:00.000Z"
+  },
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59da76563ceef29eec4b9"
+  },
+  "nombre": "Melamina Blanca 18mm",
+  "descripcion": "Tablero de melamina blanco de 18 mm para interiores de muebles",
+  "unidad_medida": "m2",
+  "stock_actual": 300,
+  "stock_minimo": 150,
+  "precio_unitario": 14.2,
+  "fecha_ultima_compra": {
+    "$date": "2025-07-18T00:00:00.000Z"
+  },
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59da76563ceef29eec4ba"
+  },
+  "nombre": "Bisagra 35mm tipo cazoleta",
+  "descripcion": "Bisagra metálica de 35 mm tipo cazoleta para puertas de melamina",
+  "unidad_medida": "unidad",
+  "stock_actual": 500,
+  "stock_minimo": 200,
+  "precio_unitario": 0.85,
+  "fecha_ultima_compra": {
+    "$date": "2025-07-10T00:00:00.000Z"
+  },
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59da76563ceef29eec4bb"
+  },
+  "nombre": "Tornillo rosca madera 4x40mm",
+  "descripcion": "Tornillo de acero zincado para ensamblaje de tableros MDF/melamina",
+  "unidad_medida": "unidad",
+  "stock_actual": 1200,
+  "stock_minimo": 500,
+  "precio_unitario": 0.12,
+  "fecha_ultima_compra": {
+    "$date": "2025-07-12T00:00:00.000Z"
+  },
+  "activo": true
+}]

@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "68a59d606563ceef29eec4b5"
+  },
+  "nombre": "Maderas López",
+  "contacto": "Carlos López",
+  "telefono": "+51987654321",
+  "email": "contacto@maderaslopez.pe",
+  "direccion": "Av. Industrial 123, Ate, Lima",
+  "ruc": "20123456789",
+  "fecha_registro": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "condiciones_pago": "30 días",
+  "categorias": [
+    "materias_primas",
+    "insumos"
+  ],
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59d606563ceef29eec4b6"
+  },
+  "nombre": "Suministros Técnicos García",
+  "contacto": "María García",
+  "telefono": "+51984111223",
+  "email": "ventas@suministrosgarcia.pe",
+  "direccion": "Jr. Los Ingenieros 456, Cercado, Arequipa",
+  "ruc": "20456789012",
+  "fecha_registro": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "condiciones_pago": "15 días",
+  "categorias": [
+    "herramientas",
+    "maquinaria",
+    "accesorios para muebles"
+  ],
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59d606563ceef29eec4b7"
+  },
+  "nombre": "Plásticos del Norte",
+  "contacto": "Javier Ruiz",
+  "telefono": "+51993445566",
+  "email": "info@plasticosnorte.pe",
+  "direccion": "Mz. B Lt. 8, Urb. Industrial, Trujillo",
+  "ruc": "20567890123",
+  "fecha_registro": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "condiciones_pago": "Contado",
+  "categorias": [
+    "materias_primas",
+    "envases"
+  ],
+  "activo": true
+}]

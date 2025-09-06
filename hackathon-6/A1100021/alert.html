@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Reportar | ServiPhone</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">ServiPhone</div>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li>
+            <a href="#">Servicios ▾</a>
+            <ul>
+              <li><a href="./client.html">Clientes</a></li>
+              <li><a href="./phone.html">Teléfonos</a></li>
+              <li><a href="./ticket.html">Tickets</a></li>
+              <li><a href="./control.html">Control</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Datos ▾</a>
+             <ul>
+              <li><a href="./report.html">Reporte</a></li>
+              <li><a href="./backup.html">Backup</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Central ▾</a>
+             <ul>
+              <li><a href="./alert.html">Reportar</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Mantenimiento ▾</a>
+            <ul>
+              <li><a href="./central.html">Centrales</a></li>
+              <li><a href="./branch.html">Sucursales</a></li>
+              <li><a href="./employee.html">Empleados</a></li>
+              <li><a href="./part.html">Repuestos</a></li>
+              <li><a href="./model.html">Modelos</a></li>
+              <li><a href="./brand.html">Marcas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Barra de navegación -->
+    <h2 class="table-title">Reportar Teléfono</h2>
+
+    <div class="table-search">
+      <label for="central">Central:</label>
+      <select id="central"></select>
+      </select>
+    </div>
+    
+    <div class="table-wrapper">
+      <table class="model-table" id="alerts-table">
+        <thead>
+          <tr>
+            <th>IMEI</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Estado</th>
+            <th>Reportar</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./persistence/db_operations.js"></script>
+    <script src="./persistence/db.js"></script>
+    <script src="./model/central.js"></script>
+    <script src="./model/branch.js"></script>
+    <script src="./model/phone.js"></script>
+    <script src="./js/alert.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "68a59ee86563ceef29eec4bc"
+  },
+  "nombre": "Pegamento para madera",
+  "descripcion": "Cola blanca para uso en carpintería",
+  "unidad_medida": "litros",
+  "stock_actual": 30,
+  "stock_minimo": 10,
+  "precio_unitario": 5,
+  "fecha_registro": {
+    "$date": "2025-06-01T00:00:00.000Z"
+  },
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59ee86563ceef29eec4bd"
+  },
+  "nombre": "Lija 220",
+  "descripcion": "Papel de lija para acabado fino en madera",
+  "unidad_medida": "paquete",
+  "stock_actual": 50,
+  "stock_minimo": 20,
+  "precio_unitario": 3.5,
+  "fecha_registro": {
+    "$date": "2025-06-05T00:00:00.000Z"
+  },
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59ee86563ceef29eec4be"
+  },
+  "nombre": "Barniz transparente",
+  "descripcion": "Barniz para protección y acabado de muebles de madera",
+  "unidad_medida": "litros",
+  "stock_actual": 25,
+  "stock_minimo": 10,
+  "precio_unitario": 12,
+  "fecha_registro": {
+    "$date": "2025-06-07T00:00:00.000Z"
+  },
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "68a59ee86563ceef29eec4bf"
+  },
+  "nombre": "Solvente para barniz",
+  "descripcion": "Solvente para limpieza y dilución de barniz",
+  "unidad_medida": "litros",
+  "stock_actual": 40,
+  "stock_minimo": 15,
+  "precio_unitario": 7,
+  "fecha_registro": {
+    "$date": "2025-06-10T00:00:00.000Z"
+  },
+  "activo": true
+}]

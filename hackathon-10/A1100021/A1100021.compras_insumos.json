@@ -1,0 +1,92 @@
+[{
+  "_id": {
+    "$oid": "68a5a88d6563ceef29eec4d4"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b5"
+  },
+  "fecha_compra": {
+    "$date": "2025-08-10T00:00:00.000Z"
+  },
+  "total_compra": 90,
+  "observaciones": "Compra de pegamento para madera",
+  "items": [
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4bc"
+      },
+      "cantidad": 18,
+      "precio_unitario": 5,
+      "subtotal": 90
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68a5a88d6563ceef29eec4d5"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b6"
+  },
+  "fecha_compra": {
+    "$date": "2025-08-12T00:00:00.000Z"
+  },
+  "total_compra": 175,
+  "observaciones": "Compra de lijas 220",
+  "items": [
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4bd"
+      },
+      "cantidad": 50,
+      "precio_unitario": 3.5,
+      "subtotal": 175
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68a5a88d6563ceef29eec4d6"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b5"
+  },
+  "fecha_compra": {
+    "$date": "2025-08-15T00:00:00.000Z"
+  },
+  "total_compra": 300,
+  "observaciones": "Compra de barniz transparente",
+  "items": [
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4be"
+      },
+      "cantidad": 25,
+      "precio_unitario": 12,
+      "subtotal": 300
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68a5a88d6563ceef29eec4d7"
+  },
+  "proveedor_id": {
+    "$oid": "68a59d606563ceef29eec4b6"
+  },
+  "fecha_compra": {
+    "$date": "2025-08-18T00:00:00.000Z"
+  },
+  "total_compra": 280,
+  "observaciones": "Compra de solvente para barniz",
+  "items": [
+    {
+      "insumo_id": {
+        "$oid": "68a59ee86563ceef29eec4bf"
+      },
+      "cantidad": 40,
+      "precio_unitario": 7,
+      "subtotal": 280
+    }
+  ]
+}]

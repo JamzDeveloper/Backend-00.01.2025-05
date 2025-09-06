@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "68a57476ec74a92e1beec4aa"
+  },
+  "nombre": "Diseño",
+  "descripcion": "Responsable de la creación de planos, modelos y personalización de productos"
+},
+{
+  "_id": {
+    "$oid": "68a57476ec74a92e1beec4a9"
+  },
+  "nombre": "Producción",
+  "descripcion": "Encargado de la fabricación, ensamblado y control del proceso productivo"
+},
+{
+  "_id": {
+    "$oid": "68a57476ec74a92e1beec4ab"
+  },
+  "nombre": "Logística",
+  "descripcion": "Organiza el almacenamiento, transporte y entrega de los armarios terminados"
+}]
