@@ -7,6 +7,8 @@ import cors from "cors";
 import { Server as SocketServer } from "socket.io";
 
 import { sequelize } from "../config/db.js";
+import { UserRoute } from "../modules/users/routes/index.js";
+import { AuthRoute } from "../modules/auth/routes/auth.route.js";
 
 class Server {
   constructor() {
@@ -16,17 +18,20 @@ class Server {
     this.app = express();
     this.server = createServer(this.app);
     this.io = new SocketServer(this.server);
+    this.userPath = "/users";
+    this.authPath = "/auth";
 
     this.middleware();
 
     this.routes();
 
     this.dbConnection();
-    this.socket()
+    this.socket();
   }
 
   routes() {
-  
+    this.app.use(this.userPath, UserRoute);
+    this.app.use(this.authPath, AuthRoute);
   }
 
   middleware() {
@@ -40,7 +45,8 @@ class Server {
       await sequelize.authenticate();
 
       await sequelize.sync({
-        alter: true,
+        force: true,
+        // alter:true
       });
       console.log("Connection has been established successfully.");
     } catch (error) {
@@ -58,7 +64,6 @@ class Server {
 
       socket.on("chat event", (data) => {
         //guardar en la base de datos
-
 
         this.io.emit("respuesta", data);
       });
