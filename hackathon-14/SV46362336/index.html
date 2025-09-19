@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Moderno</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .chat-container {
+        width: 100%;
+        max-width: 600px;
+        height: 90vh; /* Ajusta la altura del contenedor del chat */
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .chat-header {
+        background-color: #4a5568;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      .chat-messages {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 20px;
+        /* Estilo para la barra de desplazamiento */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .chat-messages::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+      }
+      .message {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: flex-start;
+      }
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #a0aec0;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+        flex-shrink: 0; /* Evita que el avatar se encoja */
+      }
+      .message-content {
+        background-color: #e2e8f0;
+        padding: 10px 15px;
+        border-radius: 18px;
+        max-width: 70%;
+        position: relative;
+        word-wrap: break-word; /* Rompe palabras largas */
+      }
+      .message-input {
+        display: flex;
+        padding: 20px;
+        border-top: 1px solid #e2e8f0;
+        align-items: center; /* Alinea verticalmente los elementos */
+      }
+      .message-input #usernameInput {
+        width: 100px;
+        padding: 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+      .message-input #input {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+      .message-input button {
+        background-color: #4a5568;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        flex-shrink: 0; /* Evita que el botón se encoja */
+      }
+      .message-input button:hover {
+        background-color: #2d3748;
+      }
+      .delete-icon {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #e53e3e;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .message-content:hover .delete-icon {
+        opacity: 1;
+      }
+      .user-message {
+        flex-direction: row-reverse;
+      }
+      .user-message .avatar {
+        margin-right: 0;
+        margin-left: 10px;
+        background-color: #4a5568; /* Color para el avatar del usuario */
+      }
+      .user-message .message-content {
+        background-color: #4a5568;
+        color: white;
+      }
+      .message-info {
+        display: block;
+        font-size: 0.75em;
+        color: #777;
+        margin-top: 5px;
+        text-align: right;
+      }
+      .user-message .message-info {
+        color: #ccc; /* Color para la información del mensaje del usuario */
+        text-align: left;
+      }
+      .message-content p {
+        margin: 0;
+      }
+      .message-username {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .user-message .message-username {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">Chat Moderno</div>
+      <div class="chat-messages" id="messages">
+        </div>
+      <div class="message-input">
+        <input
+          id="usernameInput"
+          type="text"
+          placeholder="Tu nombre"
+          autocomplete="off"
+        />
+        <input
+          id="input"
+          type="text"
+          placeholder="Escribe tu mensaje..."
+          autocomplete="off"
+        />
+        <button id="sendButton">Enviar</button>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      // Función para generar un nombre de usuario aleatorio
+      function generateUsernameRandom() {
+        const adjectives = [
+          "brave",
+          "clever",
+          "swift",
+          "bold",
+          "epic",
+          "happy",
+          "bright",
+        ];
+        const nouns = [
+          "tiger",
+          "lion",
+          "wolf",
+          "shark",
+          "panther",
+          "eagle",
+          "bear",
+        ];
+        const number = Math.floor(Math.random() * 1000);
+
+        const randomAdj =
+          adjectives[Math.floor(Math.random() * adjectives.length)];
+        const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+        return `${randomAdj}-${randomNoun}-${number}`;
+      }
+
+      // Función para añadir mensajes a la interfaz de usuario
+      function addMessageToUI(data, isUserMessage = false, messageId = null) {
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("message");
+        if (isUserMessage) {
+          messageElement.classList.add("user-message");
+        }
+        if (messageId) {
+          messageElement.dataset.messageId = messageId; // Guarda el ID para futuras operaciones
+        }
+
+        const avatar = document.createElement("div");
+        avatar.classList.add("avatar");
+        avatar.textContent = data.username.charAt(0).toUpperCase();
+
+        const messageContent = document.createElement("div");
+        messageContent.classList.add("message-content");
+
+        const usernameSpan = document.createElement("span");
+        usernameSpan.classList.add("message-username");
+        usernameSpan.textContent = data.username;
+
+        const messageText = document.createElement("p");
+        messageText.textContent = data.message;
+
+        const messageInfo = document.createElement("span");
+        messageInfo.classList.add("message-info");
+        messageInfo.textContent = new Date(data.timestamp || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        messageContent.appendChild(usernameSpan);
+        messageContent.appendChild(messageText);
+        messageContent.appendChild(messageInfo);
+
+        messageElement.appendChild(avatar);
+        messageElement.appendChild(messageContent);
+
+        document.getElementById("messages").appendChild(messageElement);
+
+        document.getElementById("messages").scrollTop =
+          document.getElementById("messages").scrollHeight;
+      }
+
+      // --- Inicialización de Socket.IO y lógica del chat ---
+      const socket = io();
+      let currentUsername = generateUsernameRandom(); // Variable para el nombre de usuario actual
+
+      const usernameInput = document.getElementById("usernameInput");
+      const chatInput = document.getElementById("input");
+      const sendButton = document.getElementById("sendButton");
+      const messagesContainer = document.getElementById("messages");
+
+      // Cargar el nombre de usuario desde localStorage o generarlo
+      const storedUsername = localStorage.getItem("username");
+      if (storedUsername) {
+        currentUsername = storedUsername;
+      }
+      usernameInput.value = currentUsername; // Muestra el nombre en el input
+
+      // Evento al enviar mensaje
+      sendButton.addEventListener("click", (e) => {
+        e.preventDefault(); // Evitar el envío por defecto del formulario
+
+        const message = chatInput.value.trim();
+        const finalUsername = usernameInput.value.trim(); // Obtener el nombre de usuario del input
+
+        // Si el nombre de usuario ha cambiado, guardarlo en localStorage
+        if (finalUsername !== currentUsername) {
+          currentUsername = finalUsername;
+          localStorage.setItem("username", currentUsername);
+        }
+
+        if (message && finalUsername) {
+          const messageData = { username: finalUsername, message: message, timestamp: Date.now() };
+          socket.emit("chat event", messageData);
+          //addMessageToUI(messageData, true); // Añadir instantáneamente el mensaje del usuario
+          chatInput.value = ""; // Limpiar el input del mensaje
+        } else if (!finalUsername) {
+          alert("Por favor, ingresa tu nombre de usuario.");
+        }
+      });
+
+      // Manejar la pulsación de Enter en el input del mensaje
+      chatInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+              e.preventDefault(); // Prevenir salto de línea si es un textarea
+              sendButton.click(); // Simular clic en el botón de enviar
+          }
+      });
+
+      // Recibir respuestas del servidor (mensajes de otros usuarios o del bot)
+      socket.on("respuesta", (data) => {
+        // Asumiendo que `data.username` será "IdatBot🤖" para las respuestas del bot
+        // Y el `username` del mensaje de otros usuarios
+        const isUserMessage = data.username === currentUsername; // Si es un mensaje del propio usuario, lo identificamos
+        addMessageToUI(data, isUserMessage);
+      });
+
+      // Manejar mensajes históricos al conectar
+      socket.on("historical messages", (msgs) => {
+        messagesContainer.innerHTML = ""; // Limpiar antes de cargar históricos
+        msgs.forEach((msg) => {
+          const isUserMessage = msg.username === currentUsername;
+          addMessageToUI(msg, isUserMessage, msg.id); // Pasar el ID del mensaje si existe
+        });
+      });
+    </script>
+  </body>
+</html>
